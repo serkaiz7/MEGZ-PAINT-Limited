@@ -1,0 +1,260 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+body.dark-mode {
+  background: #1c1c1c;
+  color: #f4f4f4;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+#toggle-dark-mode {
+  background: none;
+  border: 2px solid white;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#toggle-dark-mode:hover {
+  background: white;
+  color: #ff7e5f;
+}
+
+.banner {
+  background: linear-gradient(to right, rgba(255, 126, 95, 0.8), rgba(255, 126, 95, 0.5)), url('banner.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.banner .container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 60px 0;
+  background: #f4f4f4;
+}
+
+.section:nth-child(even) {
+  background: #e0e0e0;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: #ff7e5f;
+  margin-bottom: 30px;
+}
+
+.section p {
+  font-size: 1.2rem;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #feb47b;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ff7e5f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #feb47b;
+}
+
+body.dark-mode header {
+  background: linear-gradient(to right, #555, #333);
+}
+
+body.dark-mode header nav ul li a,
+body.dark-mode header #toggle-dark-mode {
+  color: #ddd;
+}
+
+body.dark-mode header nav ul li a:hover {
+  color: #ffdd57;
+}
+
+body.dark-mode .banner {
+  background: linear-gradient(to right, rgba(51, 51, 51, 0.8), rgba(85, 85, 85, 0.5)), url('banner.jpg') no-repeat center center/cover;
+}
+
+body.dark-mode .banner .container {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .section {
+  background: #2c2c2c;
+}
+
+body.dark-mode .section:nth-child(even) {
+  background: #1c1c1c;
+}
+
+body.dark-mode .section h2 {
+  color: #ffdd57;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #333;
+  color: #ddd;
+  border: 1px solid #555;
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: #ffdd57;
+}
+
+body.dark-mode button:hover {
+  background-color: #444;
+}
+
+body.dark-mode footer {
+  background-color: #333;
+}
+
+form p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form p.success {
+  color: green;
+}
+
+form p.error {
+  color: red;
+}

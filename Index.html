@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEGZ PAINT Limited</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="#">
+          <img src="Megzlogo.jpg" alt="MEGZ PAINT Limited">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+        </ul>
+      </nav>
+      <button id="toggle-dark-mode">Night Mode</button>
+    </div>
+  </header>
+
+  <div class="banner">
+    <div class="container">
+      <h1>Transform Your Space with Professional Paint Services</h1>
+      <p>Quality painting solutions for homes and businesses.</p>
+    </div>
+  </div>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>We are a team of professional painters dedicated to transforming your spaces with quality and precision. With years of experience in the industry, we bring a touch of elegance to every project we undertake.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Residential Painting</li>
+          <li>Commercial Painting</li>
+          <li>Interior Painting</li>
+          <li>Exterior Painting</li>
+          <li>Wallpaper Installation and Removal</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <img src="b1.jpg" alt="Gallery Image 1" class="gallery-item">
+          <img src="a1.jpg" alt="Gallery Image 2" class="gallery-item">
+          <img src="b2.jpg" alt="Gallery Image 3" class="gallery-item">
+          <img src="a2.jpg" alt="Gallery Image 5" class="gallery-item">
+	  <img src="b3.jpg" alt="Gallery Image 6" class="gallery-item">
+	  <img src="a3.jpg" alt="Gallery Image 7" class="gallery-item">
+	  <img src="b4.jpg" alt="Gallery Image 8" class="gallery-item">
+	  <img src="a4.jpg" alt="Gallery Image 9" class="gallery-item">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="send_email.php" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="quote" class="section">
+      <div class="container">
+        <h2>Get a Quote</h2>
+        <form id="quoteForm" action="/quote" method="post">
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="residential">Residential Painting</option>
+              <option value="commercial">Commercial Painting</option>
+              <option value="interior">Interior Painting</option>
+              <option value="exterior">Exterior Painting</option>
+              <option value="wallpaper">Wallpaper Installation/Removal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="details">Details</label>
+            <textarea id="details" name="details" rows="5" required></textarea>
+          </div>
+          <button type="submit">Get Quote</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Professional Paint Services. All rights reserved.</p>
+      <p>River Road, Hamilton, New Zealand</p>
+      <p>+64 22 632 8013</p>
+      <p><a href="mailto:serkaiz7@gmail.com">serkaiz7@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Professional Paint Services</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+    header, footer {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 2em 0;
+    }
+    .section {
+      padding: 2em 0;
+    }
+    #toggle-dark-mode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .dark-mode {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #f5f7fa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Paint Services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2>About Us</h2>
+      <p>We are a team of professional painters dedicated to transforming your spaces with quality and precision. With years of experience in the industry, we bring a touch of elegance to every project we undertake.</p>
+    </section>
+  </div>
+
+  <button id="toggle-dark-mode">Night Mode</button>
+  
+  <footer>
+    <p>&copy; 2024 Professional Paint Services. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const buttonText = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Night Mode';
+      document.getElementById('toggle-dark-mode').textContent = buttonText;
+    });
+  </script>
+</body>
+</html>

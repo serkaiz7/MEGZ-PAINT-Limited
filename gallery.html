@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Professional Paint Services</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+    header, footer {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 2em 0;
+    }
+    .section {
+      padding: 2em 0;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .gallery-item {
+      width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: scale(1.1);
+    }
+    #toggle-dark-mode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .dark-mode {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #f5f7fa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Paint Services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+          <img src="b1.jpg" alt="Gallery Image 1" class="gallery-item">
+          <img src="a1.jpg" alt="Gallery Image 2" class="gallery-item">
+          <img src="b2.jpg" alt="Gallery Image 3" class="gallery-item">
+          <img src="a2.jpg" alt="Gallery Image 5" class="gallery-item">
+	  <img src="b3.jpg" alt="Gallery Image 6" class="gallery-item">
+	  <img src="a3.jpg" alt="Gallery Image 7" class="gallery-item">
+	  <img src="b4.jpg" alt="Gallery Image 8" class="gallery-item">
+	  <img src="a4.jpg" alt="Gallery Image 9" class="gallery-item">
+        </div>
+    </section>
+  </div>
+
+  <button id="toggle-dark-mode">Night Mode</button>
+  
+  <footer>
+    <p>&copy; 2024 Professional Paint Services. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const buttonText = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Night Mode';
+      document.getElementById('toggle-dark-mode').textContent = buttonText;
+    });
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        window.open(item.src, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>

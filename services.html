@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Professional Paint Services</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+    header, footer {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 2em 0;
+    }
+    .section {
+      padding: 2em 0;
+    }
+    .service {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+    .service img {
+      max-width: 200px;
+      margin-right: 20px;
+    }
+    #toggle-dark-mode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .dark-mode {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #f5f7fa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Paint Services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <section class="section">
+      <h2>Our Services</h2>
+      <div class="service">
+        <img src="residential.jpg" alt="Residential Painting">
+        <div>
+          <h3>Residential Painting</h3>
+          <p>Our residential painting services are tailored to meet the unique needs of your home. We offer both interior and exterior painting, using high-quality paints that provide a long-lasting finish and vibrant color. Whether you need a single room or your entire house painted, our skilled team ensures a smooth and flawless finish.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="commercial.jpg" alt="Commercial Painting">
+        <div>
+          <h3>Commercial Painting</h3>
+          <p>We understand the importance of maintaining a professional appearance for your business. Our commercial painting services include interior and exterior painting for offices, retail spaces, and industrial facilities. We work around your schedule to minimize disruption to your operations, delivering exceptional results every time.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="interior.jpg" alt="Interior Painting">
+        <div>
+          <h3>Interior Painting</h3>
+          <p>Transform your indoor spaces with our expert interior painting services. We pay close attention to detail, ensuring that all surfaces are properly prepared and painted to achieve a flawless look. From color consultation to the final coat, we are dedicated to enhancing the beauty and comfort of your home or business.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="exterior.jpg" alt="Exterior Painting">
+        <div>
+          <h3>Exterior Painting</h3>
+          <p>Protect and beautify the exterior of your property with our comprehensive exterior painting services. We use durable, weather-resistant paints and coatings to withstand the elements and keep your building looking great for years to come. Our team takes care of every aspect, from surface preparation to cleanup, ensuring a hassle-free experience.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="roof.jpg" alt="Roof Painting">
+        <div>
+          <h3>Roof Painting</h3>
+          <p>Our roof painting services help extend the life of your roof while enhancing its appearance. We use high-quality, weather-resistant paints that protect against the elements, including UV rays and moisture. Our skilled team ensures thorough preparation and application, providing a durable and attractive finish.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="deck.png" alt="Deck Painting">
+        <div>
+          <h3>Deck Painting</h3>
+          <p>Our deck painting services are designed to protect and beautify your outdoor living space. We use premium paints and stains that withstand foot traffic, weather, and UV exposure, ensuring your deck looks great and lasts longer. From cleaning and prepping to the final coat, we handle every detail with care.</p>
+        </div>
+      </div>
+      <div class="service">
+        <img src="fence.png" alt="Fence Painting">
+        <div>
+          <h3>Fence Painting</h3>
+          <p>Enhance the curb appeal and durability of your fence with our fence painting services. We use high-quality, weather-resistant paints that protect against the elements and provide a fresh, vibrant look. Our team ensures a thorough and even application, giving your fence a new lease on life.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <button id="toggle-dark-mode">Night Mode</button>
+  
+  <footer>
+    <p>&copy; 2024 Professional Paint Services. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    document.getElementById('toggle-dark-mode').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const buttonText = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Night Mode';
+      document.getElementById('toggle-dark-mode').textContent = buttonText;
+    });
+  </script>
+</body>
+</html>
